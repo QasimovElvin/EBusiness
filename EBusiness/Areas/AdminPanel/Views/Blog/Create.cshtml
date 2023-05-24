@@ -1,0 +1,34 @@
+﻿@using EBusiness.Models
+
+@{
+    ViewData["Title"] = "Create";
+}
+@model Blog
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Blog</h4>
+            <form class="forms-sample" asp-action="Create" asp-area="AdminPanel" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Imagefile">Image</label>
+                    <input  class="form-control" asp-for="Imagefile" placeholder="Image">
+                    <span asp-validation-for="Imagefile" ></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">Title</label>
+                    <input type="text" class="form-control" asp-for="Title" placeholder="Title">
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <input type="text" class="form-control" asp-for="Description" placeholder="Image">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div asp-validation-summary="ModelOnly"></div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light" asp-action="Index">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
